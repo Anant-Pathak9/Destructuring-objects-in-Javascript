@@ -1,0 +1,27 @@
+const AVG_TEMPERATURES={
+    today: 77.5,
+    tommorrow:79
+};
+function gettempoftommorrow(avgto) {
+    "use strict";
+    const { tommorrow : temoftommorrow }=avgto;
+    return temoftommorrow;
+}
+function gettempoftoday(avgtoday) {
+    "use strict";
+    const { today : temoftoday }=avgtoday;
+    return temoftoday;
+}
+console.log(gettempoftommorrow(AVG_TEMPERATURES));
+console.log(gettempoftoday(AVG_TEMPERATURES));
+
+// Nested destructureing
+const LOCAL_FORECAST={
+    today:{min:72,max:79},
+    tommorrow:{min:73,max:83}
+};
+function getmaxoftommorrow(forcast){
+    const { tommorrow : {max : maxoftommorrow}}= forcast;
+    return maxoftommorrow;
+}
+console.log(getmaxoftommorrow(LOCAL_FORECAST));
